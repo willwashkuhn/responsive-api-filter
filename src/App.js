@@ -1,23 +1,23 @@
 import React, {Component} from 'react';
-import Contacts from './components/contacts';
+import Sports from './components/sports';
 
 class App extends Component {
   state = {
-    contacts: []
+    sports: []
   }
 
   componentDidMount() {
-    fetch('http://jsonplaceholder.typicode.com/users')
+    fetch('https://www.thesportsdb.com/api/v1/json/1/all_sports.php')
     .then(res => res.json())
     .then((data) => {
-      this.setState({ contacts: data })
+      this.setState({ sports: data.sports })
     })
     .catch(console.log)
   }
 
   render () {
     return (
-      <Contacts contacts={this.state.contacts} />
+      <Sports sports={this.state.sports} />
     );
   }
 }
