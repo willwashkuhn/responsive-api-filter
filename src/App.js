@@ -37,7 +37,7 @@ class App extends Component {
         if (a.strSport > b.strSport) { return 1; }
         return 0;
       });
-      console.log(sports);
+      // console.log(sports);
       sports = sports.sort((a, b) => a.strSport - b.strSport);
       const filteredData = data.sports.filter(sport => {
         return sport.strSport.toLowerCase().includes(query.toLowerCase());
