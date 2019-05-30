@@ -4,11 +4,12 @@ const Sports = ({ sports }) => {
   return (
     <div>
       <center><h1>Sports List</h1></center>
-      {sports.map((sport) => (
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">{sport.strSport}</h5>
-                <p class="card-text">{sport.strSportDescription}</p>
+      {sports
+        .map((sport) => (
+            <div className="card" key={sport.idSport}>
+              <div className="card-body">
+                <h5 className="card-title">{sport.strSport}</h5>
+                <p className="card-text">{sport.strSportDescription}</p>
               </div>
             </div>
       ))}

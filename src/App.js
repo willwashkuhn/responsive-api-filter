@@ -32,11 +32,18 @@ class App extends Component {
     .then(res => res.json())
     .then((data) => {
       const { query } = this.state;
+      let sports = data.sports.sort((a, b) => {
+        if (a.strSport < b.strSport) { return -1; }
+        if (a.strSport > b.strSport) { return 1; }
+        return 0;
+      });
+      console.log(sports);
+      sports = sports.sort((a, b) => a.strSport - b.strSport);
       const filteredData = data.sports.filter(sport => {
         return sport.strSport.toLowerCase().includes(query.toLowerCase());
       });
       this.setState({ 
-        sports: data.sports,
+        sports,
         filteredData
        });
     })
