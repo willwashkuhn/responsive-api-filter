@@ -2,7 +2,7 @@
   "name": "responsive-api-filter",
   "version": "0.1.0",
   "private": true,
-  "hopeage": "https://willwashkuhn.github.io/responsive-api-filter",
+  "homepage": "https://willwashkuhn.github.io/responsive-api-filter",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
