@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 # responsive-api-filter
 A single-page responsive web app that consumes a public API, sorts the data alphabetically and allows the user to filter.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
